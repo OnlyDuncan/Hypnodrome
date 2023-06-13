@@ -69,3 +69,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # Video-App
+
+This application is a video app similar to YouTube. To build it I used Material UI and React and got the YouTube API from RapidAPI. In the process of building this app I started by watching and following along with a tutorial. Next I plan on altering the design and functionality of the app to fit my needs.
