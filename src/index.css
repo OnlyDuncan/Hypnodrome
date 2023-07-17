@@ -26,7 +26,7 @@ a {
 }
 
 .category-btn:hover {
-  background-color: #FC1503 !important;
+  background-color: #c9b6e7 !important;
   color: white !important;
 }
 
@@ -65,12 +65,6 @@ a {
 @media screen and (max-width: 900px) {
   .category-btn{
     margin: 10px;
-  }
-}
-
-@media screen and (max-width:800px){
-  .copyright{
-    display:none !important;
   }
 }
 

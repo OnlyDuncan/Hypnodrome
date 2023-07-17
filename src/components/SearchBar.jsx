@@ -38,7 +38,7 @@ const SearchBar = () => {
                 type="submit"
                 sx={{
                     p: '10px',
-                    color: 'red'
+                    color: '#c9b6e7'
                 }}
             >
                 <Search />

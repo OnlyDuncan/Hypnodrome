@@ -43,10 +43,10 @@ const VideoDetail = () => {
               </Link>
               <Stack direction="row" gap="20px" alignItems="center">
                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                  {parseInt(viewCount).toLocaleString()} views
+                  {parseInt(viewCount).toLocaleString()} Views
                 </Typography>
                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                  {parseInt(likeCount).toLocaleString()} likes
+                  {parseInt(likeCount).toLocaleString()} Likes
                 </Typography>
               </Stack>
             </Stack>
