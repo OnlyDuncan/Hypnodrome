@@ -13,7 +13,7 @@ const Navbar = () => (
   >
     <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
       <img src={logo} alt="logo" height={45} style={{ marginRight: '20px' }}/>
-      <Typography color="#c9b6e7">
+      <Typography fontSize="35px" color="#c9b6e7" className="vektra">
         Hypnodrome
       </Typography>
     </Link>
