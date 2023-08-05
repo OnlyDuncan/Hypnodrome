@@ -1,3 +1,22 @@
+# Hypnodrome
+
+## Table Of Contents
+* [General Info](#general-info)
+* [Technologies](#technologies)
+* [Project Status](#project-status)
+* [Planned Changes](#planned-changes)
+* [Setup](#setup)
+
+## General Info
+
+## Technologies
+
+## Project Status
+
+## Planned Changes
+
+## Setup
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
