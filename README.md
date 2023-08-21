@@ -8,23 +8,23 @@
 * [Setup](#setup)
 
 ## General Info
-This application is a video app similar to YouTube. To build it I used Material UI and React and got the YouTube API from RapidAPI.
+This application is a video app similar to YouTube. To build it I used React with MaterialUI and Tailwind, and got the YouTube API from RapidAPI.
 
 ## Technologies
 React 18.2.0  
 MaterialUI 5.9.3  
+TailwindCSS 3.3.3  
+Axios 0.27.2  
 Youtube V3 API by ytdlfree
 
 ## Project Status
-In Progress
+Completed for now.
 
 ## Planned Changes
-Room for Improvement:  
-* Changing some of the stylization  
+Room for Improvement:   
 * Adding additional functionality
 
-To Do:  
-* Style changes  
+To Do: 
 * Brainstorm what I want to add
 
 
