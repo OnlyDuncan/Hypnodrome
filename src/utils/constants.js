@@ -9,7 +9,7 @@ import CheckroomIcon from '@mui/icons-material/Checkroom';
 import GraphicEqIcon from '@mui/icons-material/GraphicEq';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import Logo from '../assets/hypnosis.png';
+import Logo from '../assets/Hypno.svg';
 
 export const logo = Logo;
 

@@ -19,24 +19,26 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
         }}
     >
         <Link to={`/channel/${channelDetail?.id?.channelId}`}>
-            <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', color: '#fff' }}>
-                <CardMedia
-                    image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
-                    alt={channelDetail?.snippet?.title}
-                    sx={{ borderRadius: '50%', height: '180px', width: '180px', mb: 2, border: '1px solid #e3e3e3' }}
-                />
-                <Typography variant="h6">
-                    {channelDetail?.snippet?.title}
-                    <CheckCircle sx={{ fontSize: 12, color: 'gray', ml: '5px' }} />
-                </Typography>
-                {channelDetail?.statistics?.subscriberCount && (
-                    <Typography>
-                        {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()}
-                        <br />
-                        Subscribers
+            <div className="flex drop-shadow-lg" style={{ backgroundColor: "#827689", borderRadius: "20px" }}>
+                <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', color: '#fff' }}>
+                    <CardMedia
+                        image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
+                        alt={channelDetail?.snippet?.title}
+                        sx={{ borderRadius: '50%', height: '180px', width: '180px', mb: 2, border: '1px solid #e3e3e3' }}
+                    />
+                    <Typography fontFamily="odisseia, sans-serif" variant="h6">
+                        {channelDetail?.snippet?.title}
+                        <CheckCircle sx={{ fontSize: 12, color: 'gray', ml: '5px' }} />
                     </Typography>
-                )}
-            </CardContent>
+                    {channelDetail?.statistics?.subscriberCount && (
+                        <Typography fontFamily="odisseia, sans-serif">
+                            {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()}
+                            <br />
+                            Subscribers
+                        </Typography>
+                    )}
+                </CardContent>
+            </div>
         </Link>
 
     </Box>

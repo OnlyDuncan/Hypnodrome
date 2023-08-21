@@ -3,18 +3,24 @@ import { categories } from '../utils/constants';
 
 const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
     <Stack
+        className="drop-shadow-lg"
         direction="row"
         sx={{
             overflow: "auto",
-            height: { sx: "auto", md: "95%" },
-            flexDirection: { md: "column" }
+            height: { sx: "auto", md: "80%" },
+            flexDirection: { md: "column" },
+            backgroundColor: "#827689",
+            borderRadius: '20px',
+            margin: "15px",
+            padding: "5px",
         }}
     >
         {categories.map((category) => (
             <button
-                className="category-btn"
+                className="category-btn odisseia"
                 onClick={() => setSelectedCategory(category.name)}
                 style={{
+                    backgroundColor: "b394c4",
                     background: category.name ===
                         selectedCategory && "#c9b6e7",
                     color: "white"

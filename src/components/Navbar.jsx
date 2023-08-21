@@ -1,24 +1,19 @@
 import React from 'react';
-import { Stack, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
 import { logo } from '../utils/constants';
 import SearchBar from './SearchBar';
 
 const Navbar = () => (
-  <Stack 
-    direction="row"
-    alignItems="center" 
-    p={2} 
-    sx={{ position: 'sticky', background: '#000', top: 0, justifyContent: 'space-between'}}
-  >
-    <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
-      <img src={logo} alt="logo" height={45} style={{ marginRight: '20px' }}/>
-      <Typography fontSize="35px" color="#c9b6e7" className="vektra">
-        Hypnodrome
-      </Typography>
-    </Link>
-    <SearchBar />
-  </Stack>
+  <div className="flex justify-center">
+    <div className="flex relative items-center p-5 mt-5 drop-shadow-lg justify-between" style={{ backgroundColor: "#827689", borderRadius: "20px", width: "95vw" }}>
+      <a href="/feed" className="flex items-center">
+        <img src={logo} alt="logo" className="hypno logo mr-10" />
+        <h1 className="anton text-3xl text-white header">
+          HYPNODROME
+        </h1>
+      </a>
+      <SearchBar />
+    </div>
+  </div>
 )
 
 export default Navbar;

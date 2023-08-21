@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Box } from '@mui/material';
-import { Videos, ChannelCard } from './';
+import { Box, CardContent, CardMedia, Typography } from '@mui/material';
+import { Videos, Navbar } from './';
 import { fetchFromAPI } from '../utils/fetchFromAPI';
+import { CheckCircle } from '@mui/icons-material';
+import { demoProfilePicture } from '../utils/constants';
 
 const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState(null);
@@ -25,20 +27,35 @@ const ChannelDetail = () => {
   }, [id]);
 
   return (
-    <Box minHeight="95vh">
-      <Box>
-        <div style={{
-          background: 'linear-gradient(90deg, rgba(0, 238, 247, 1) 0%, rgba(206, 3, 184, 1) 100%, rgba(0, 212, 255, 1) 100%)',
-          zIndex: 10,
-          height: '300px'
-        }} />
-        <ChannelCard channelDetail={channelDetail} marginTop="-110px" />
-      </Box>
-      <Box display="flex" p="2">
-        <Box sx={{ mr: { sm: '100px' } }} />
-        <Videos videos={videos} />
-      </Box>
-    </Box>
+    <div className="mainWallpaper w-full h-screen">
+      <Navbar />
+      <div style={{ overflowY: 'scroll', height: '75vh' }}>
+        <div className="flex justify-center align-center drop-shadow-lg" style={{ backgroundColor: "#827689", borderRadius: "20px", margin: '20px' }}>
+          <CardContent sx={{ display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", color: "#fff" }}>
+            <CardMedia
+              image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
+              alt={channelDetail?.snippet?.title}
+              sx={{ zIndex: '9', borderRadius: "50%", height: "180px", width: "180px", mb: 2, border: "1px solid #e3e3e3" }}
+            />
+            <Typography fontFamily="odisseia, sans-serif" variant="h6">
+              {channelDetail?.snippet?.title}
+              <CheckCircle sx={{ fontSize: 12, color: "gray", ml: "5px" }} />
+            </Typography>
+            {channelDetail?.statistics?.subscriberCount && (
+              <Typography fontFamily="odisseia, sans-serif">
+                {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()}
+                <br />
+                Subscribers
+              </Typography>
+            )}
+          </CardContent>
+        </div>
+        <Box display="flex" p="2" sx={{ marginX: '20px' }}>
+          <Box sx={{ mr: { sm: '100px' } }} />
+          <Videos videos={videos} />
+        </Box>
+      </div>
+    </div>
   )
 }
 
